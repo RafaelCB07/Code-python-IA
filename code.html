@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE PYTHON ET IA</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f5f5f5, #e2d4c3);
+    background-attachment: fixed;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #d4a373;
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom-left-radius: 50% 30px;
+    border-bottom-right-radius: 50% 30px;
+    position: relative;
+    overflow: hidden;
+    font-family: inherit; /* Assure que le header utilise la même police */
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+    font-family: inherit;
+    overflow-y: auto;
+}
+
+h1, h2, p, pre {
+    font-family: inherit; /* Assure que ces éléments utilisent la même police */
+}
+
+section {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.code-section {
+    font-family: Arial, sans-serif;
+    font-size: 14.5px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #d4a373;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    text-align: center; /* Centre le titre */
+}
+
+p {
+    line-height: 1.6;
+    margin: 0 0 20px;
+}
+
+pre {
+    background-color: #2e2e2e;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    position: relative;
+    z-index: 1;
+}
+
+footer {
+    background-color: #d4a373;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    border-top-left-radius: 50% 30px;
+    border-top-right-radius: 50% 30px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    font-family: inherit; /* Assure que le footer utilise la même police */
+}
+
+nav {
+    background-color: #e1cfb7;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    width: 100%;
+    font-family: inherit; /* Assure que le nav utilise la même police */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #262524;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-shadow: 0.5px 0.5px 0 #fff, -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -0.5px 0.5px 0 #fff;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ece1cd;
+    color: #8b7d6b;
+    border-radius: 5px;
+}
+
+    </style>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'fr',
+                includedLanguages: 'en,fr',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <style>
+        #google_translate_element {
+            
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div id="google_translate_element"></div> <!-- Widget Google Traduction, au-dessus du header -->
+    <header>
+        <h1>CODE PYTHON ET IA</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="equipe.html">À propos de nous</a></li>
+            <li><a href="codes.html">Code IA</a></li>
+            <li><a href="conseils.html">Conseils</a></li> <!-- Ajout de la page Conseils -->
+            <li><a href="contacts.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section>
+            <h2>Objectif et Utilisation des Codes IA</h2>
+            <p>Notre site vous propose des exemples de code d'intelligence artificielle prêts à être utilisés. Que vous soyez débutant ou expert, ces codes couvrent divers aspects de l'IA, tels que le machine learning, la vision par ordinateur, et le traitement du langage naturel. Chaque exemple est accompagné d'instructions pour installer les modules nécessaires et d'un guide pour comprendre comment exécuter et adapter les codes à vos projets.</p>
+        </section>
+
+        <section>
+            <h2>IA pour Génération de Blagues Aléatoires</h2>
+            <p>Ce code Python génère une blague aléatoire à partir d'une liste pré-définie. Voici un exemple Voici un exemple à copier-coller dans l'éditeur de code de Spyder situé sur la gauche de votre écran :</p>
+            <pre><code>
+                import spacy
+                from collections import Counter
+                from scipy.spatial.distance import cosine
+                import sqlite3
+                from nltk.corpus import wordnet as wn
+                from nltk.data import find
+                import random
+                
+                # Chargement des données nécessaires pour WordNet
+                try:
+                    find('corpora/omw-1.4.zip')
+                except LookupError:
+                    import nltk
+                    nltk.download('omw-1.4')
+                    nltk.download('wordnet')
+                
+                nlp = spacy.load("fr_core_news_md")
+                
+                def connect_db(db_path):
+                    """Établit une connexion à la base de données SQLite."""
+                    return sqlite3.connect(db_path)
+                
+                def check_database_structure(db_connection):
+                    """Vérifie la structure de la base de données pour la table 'mnemonic_associations'."""
+                    cursor = db_connection.cursor()
+                    cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='mnemonic_associations';")
+                    table_exists = cursor.fetchone()
+                    if table_exists:
+                        print("Table 'mnemonic_associations' trouvée.")
+                    else:
+                        print("Table 'mnemonic_associations' non trouvée.")
+                
+                def get_random_joke():
+                    """Génère une blague aléatoire à partir d'une liste pré-définie."""
+                    jokes = {
+                        'animaux': [
+                            "Pourquoi les poules n'aiment-elles pas les ascenseurs ? Parce qu'elles ont peur des œufs en l'air !",
+                            "Quel est l'animal le plus heureux ? Le pingouin, parce qu'il est toujours sur la banquise !",
+                            "Pourquoi les éléphants n’utilisent-ils pas d’ordinateurs ? Parce qu’ils ont peur de la souris !"
+                        ],
+                        'technologie': [
+                            "Pourquoi les programmeurs préfèrent-ils l'obscurité ? Parce que la lumière attire les bugs !",
+                            "Pourquoi les développeurs détestent-ils l'aviation ? Parce qu'ils n’aiment pas les bugs dans les airs !",
+                            "Comment un ingénieur en logiciel fait-il du café ? Avec Java !"
+                        ],
+                        'nourriture': [
+                            "Pourquoi les tomates n'ont-elles jamais de secret ? Parce qu'elles sont toujours en sauce !",
+                            "Comment appelle-t-on un fromage qui n'est pas vôtre ? Un fromage étranger !",
+                            "Que dit une fraise à une autre fraise ? T’es vraiment dans ton jus !"
+                        ],
+                        # Ajoutez ici plus de catégories et de blagues si vous le souhaitez
+                    }
+                    
+                    # Choisir une catégorie et une blague au hasard
+                    category = random.choice(list(jokes.keys()))
+                    joke = random.choice(jokes[category])
+                    return joke
+                
+                def main():
+                    # Connexion à la base de données (remplacez le chemin par le vôtre)
+                    db_path = "path_to_your_database.db"
+                    db_connection = connect_db(db_path)
+                    
+                    # Vérifier la structure de la base de données
+                    check_database_structure(db_connection)
+                
+                    # Générer une blague aléatoire
+                    joke = get_random_joke()
+                    
+                    print("\nBlague aléatoire :")
+                    print(joke)
+                    
+                    db_connection.close()
+                
+                if __name__ == "__main__":
+                    main()</code></pre>
+            <p><strong>Instructions :</strong> Avant d'exécuter ce code, assurez-vous d'avoir installé les bibliothèques nécessaires en utilisant les commandes suivantes dans la console de Spyder située en bas à droite. Pour installer, copiez-collez la commande et appuyez sur Entrée (Assurez-vous également de placer un "!" devant le code d'installation car vous êtes sur Spyder.):</p>
+            <pre><code>!python -m spacy download fr_core_news_md</code></pre> 
+            <pre><code>!pip install spacy scipy sqlite3 nltk</code></pre><p><strong>Conseil :</strong> Il est possible que des erreurs apparaissent dans la console même après avoir installé les bibliothèques nécessaires. Dans ce cas, ne paniquez pas. Montrez cette erreur à ChatGPT, qui vous expliquera les installations nécessaires supplémentaires pour utiliser le code. Assurez-vous également de placer un "!" devant le code d'installation car vous êtes sur Spyder.</p>
+        </section>
+
+        <section>
+            <h2>Chatbot IA simple</h2>
+            <p>Ce code Python crée un chatbot interactif qui répond à une variété de questions de manière amusante et engageante. Il utilise Tkinter pour créer une interface graphique simple. A noter, les possibilités sont assez faibles en matière de communication, les questions que vous pouvez poser sont les suivantes : 
+                "bonjour"
+                "comment ça va ?"
+                "qui es-tu ?
+                "merci"
+                "au revoir"
+                "quel est ton nom ?"
+                "quel temps fait-il ?"
+                "quel est ton plat préféré ?"
+                "raconte-moi une blague"
+                "aimez-vous les livres ?"
+                "parle-moi de la technologie"
+                "quel est ton sport préféré ?"
+                "dis-moi quelque chose d'intéressant"
+                
+                Vous avez alors peut-être la possibilité d'améliorer ce code à l'avenir !
+                Voici un exemple à copier-coller dans l'éditeur de code de Spyder situé sur la gauche de votre écran :</p>
+            <pre><code>
+                import tkinter as tk
+                from tkinter import scrolledtext
+                import random
+                
+                # Dictionnaire de réponses
+                responses = {
+                    "bonjour": ["Salut ! Comment puis-je vous aider aujourd'hui ?", 
+                                "Bonjour ! Que puis-je faire pour vous ?", 
+                                "Hello ! Comment ça va ?"],
+                    
+                    "comment ça va ?": ["Je suis juste un code, mais merci de demander ! Et vous ?", 
+                                        "Je vais bien, merci ! Et vous ?", 
+                                        "Tout va bien, et vous ?"],
+                    
+                    "qui es-tu ?": ["Je suis un chatbot simple, ici pour répondre à vos questions !", 
+                                    "Je suis un assistant virtuel. Que puis-je faire pour vous ?", 
+                                    "Juste un petit bot ici pour discuter avec vous !"],
+                    
+                    "merci": ["Avec plaisir ! Si vous avez d'autres questions, n'hésitez pas.", 
+                              "De rien ! Je suis là pour ça.", 
+                              "Pas de problème, je suis content d'aider !"],
+                    
+                    "au revoir": ["À bientôt ! Prenez soin de vous.", 
+                                  "Au revoir ! N'hésitez pas à revenir.", 
+                                  "Adieu ! J'espère vous revoir bientôt."],
+                    
+                    "quel est ton nom ?": ["Je suis un chatbot, je n'ai pas de nom, mais vous pouvez m'appeler Bot !", 
+                                           "Mon nom est Chatbot, enchanté !", 
+                                           "On peut m'appeler comme vous voulez !"],
+                    
+                    "quel temps fait-il ?": ["Je ne peux pas vérifier la météo, mais j'espère qu'il fait beau !", 
+                                             "Mieux vaut regarder par la fenêtre !", 
+                                             "Désolé, je n'ai pas accès à la météo."],
+                    
+                    "quel est ton plat préféré ?": ["Je suis un bot, je ne mange pas ! Mais j'entends que les pizzas sont populaires.", 
+                                                     "Je n'ai pas de préférences culinaires, mais j'aime le chocolat !", 
+                                                     "Je n'ai pas de goûts, mais j'aime bien les discussions sur la nourriture !"],
+                    
+                    "raconte-moi une blague": ["Pourquoi les plongeurs plongent-ils toujours en arrière et jamais en avant ? Parce que sinon ils tombent dans le bateau !", 
+                                               "Que dit une tasse à une autre tasse ? Tu as l'air un peu ébréchée !", 
+                                               "Pourquoi les fantômes sont-ils de si mauvais menteurs ? Parce qu'on peut les voir à travers !"],
+                    
+                    "aimez-vous les livres ?": ["Oui, les livres sont de fabuleux trésors de connaissances !", 
+                                                "Les livres sont une excellente source d'informations et d'imagination.", 
+                                                "Je ne lis pas, mais je suis sûr qu'il y a beaucoup de bons livres !"],
+                    
+                    "parle-moi de la technologie": ["La technologie évolue rapidement, et elle change notre façon de vivre.", 
+                                                    "C'est fascinant de voir comment l'IA progresse chaque jour !", 
+                                                    "La technologie peut rendre nos vies plus faciles, mais elle pose aussi des défis."],
+                
+                    "quel est ton sport préféré ?": ["Je n'ai pas de corps pour faire du sport, mais j'aime l'idée du football !", 
+                                                     "Je n'ai pas de préférence, mais le sport est une belle façon de rester actif !", 
+                                                     "Le sport est essentiel pour une bonne santé, mais je préfère rester sur cette interface !"],
+                    
+                    "dis-moi quelque chose d'intéressant": ["Le cœur d'une crevette est situé dans sa tête !", 
+                                                            "Les poulpes ont trois cœurs.", 
+                                                            "Le miel ne se périme jamais, il peut être retrouvé dans des tombes égyptiennes !"],
+                }
+                
+                def send_message():
+                    user_input = entry.get().lower()
+                    if user_input.strip() != "":
+                        # Afficher le message de l'utilisateur
+                        chat_area.config(state=tk.NORMAL)
+                        chat_area.insert(tk.END, f"You: {user_input}\n")
+                        
+                        # Obtenir la réponse du bot
+                        bot_response = responses.get(user_input, ["Désolé, je ne comprends pas cette question."])
+                        chat_area.insert(tk.END, f"Bot: {random.choice(bot_response)}\n")
+                        
+                        # Effacer l'input
+                        entry.delete(0, tk.END)
+                        
+                        # Faire défiler vers le bas
+                        chat_area.see(tk.END)
+                        chat_area.config(state=tk.DISABLED)
+                
+                # Créer la fenêtre principale
+                window = tk.Tk()
+                window.title("Chatbot IA Amélioré")
+                
+                # Zone de texte pour afficher la conversation
+                chat_area = scrolledtext.ScrolledText(window, state='disabled', width=50, height=20)
+                chat_area.grid(column=0, row=0, padx=10, pady=10)
+                
+                # Champ d'entrée pour l'utilisateur
+                entry = tk.Entry(window, width=43)
+                entry.grid(column=0, row=1, padx=10, pady=10)
+                
+                # Bouton pour envoyer le message
+                send_button = tk.Button(window, text="Envoyer", command=send_message)
+                send_button.grid(column=0, row=2, padx=10, pady=10)
+                
+                # Lancer l'interface graphique
+                window.mainloop()
+                code></pre>
+                
+            <p><strong>Instructions :</strong> Avant d'exécuter ce code, assurez-vous d'avoir installé les bibliothèques nécessaires en utilisant les commandes suivantes dans la console de Spyder située en bas à droite. Pour installer, copiez-collez la commande et appuyez sur Entrée (Assurez-vous également de placer un "!" devant le code d'installation car vous êtes sur Spyder.):</p>
+            <pre><code>!pip install scikit-learn</code></pre> <p><strong>Conseil :</strong> Il est possible que des erreurs apparaissent dans la console même après avoir installé les bibliothèques nécessaires. Dans ce cas, ne paniquez pas. Montrez cette erreur à ChatGPT, qui vous expliquera les installations nécessaires supplémentaires pour utiliser le code. Assurez-vous également de placer un "!" devant le code d'installation car vous êtes sur Spyder.</p>
+        </section>
+
+        <section class="code-section">
+            <h2>Génération de dessin</h2>
+            <p>Ce code permet d'afficher aléatoirement un dessin ASCII dans la console de manière progressive, ligne par ligne. Son but est de simuler la création d'un dessin qui se dévoile progressivement à l'utilisateur.</p>
+            <pre><code>import random
+                import time
+                
+                # Liste de dessins ASCII complexes
+                ascii_art = [
+                    r"""
+                      /\_/\
+                     / o o \
+                    (   "   )
+                     \~(*)~/
+                      \~_~/
+                    """,
+                    r"""
+                         /\                /\
+                        / \'._   (\_/)   _.'/ \
+                       / .''._'--(o.o)--'_.''. \
+                      /.' _/ |`'=/ " \='`| \_ `.\
+                     /` .' `\;-,'\___/',-;/` '. '\
+                    /.-'       `\(-V-)/`       `-.\  
+                               (ASCII Cat)
+                    """,
+                    r"""
+                       |\---/|
+                       | o_o |
+                        \_^_/ 
+                    """,
+                    r"""
+                              _____
+                          .-'`     '.
+                       __/  _        \
+                      /  _  (_)  o    |
+                     | (_)    __   _   /|
+                     \___   (_)  (_) / /
+                       \|           / /
+                        `|  _______|/
+                         |  |\     |   
+                         |  | \    |  
+                         |__|__|   |  
+                    """,
+                    r"""
+                               __
+                            .-'__`-.
+                           / /  \ \ \
+                           | |    | | |
+                           | |.-""-.| |
+                          ///`.::::.`\\\
+                         ||| ::/  \:: ;||
+                         ||; ::\__/:: ;||
+                          \\\ '::::' ///
+                           `=':-..-'=`
+                    """,
+                    r"""
+                      _____    _______
+                     /      \  |  o | o |
+                    |        |/ ___/___/
+                    |_________/         
+                    |_|_| |_|_|    
+                    """,
+                    r"""
+                          _________
+                        /          \
+                       /           |
+                      /  /~~~\   | |
+                      |  |  . . |/  /
+                     /  \ \_____/  /
+                    /     \______/
+                    """,
+                    r"""
+                              ,     ,
+                             (\____/)
+                              (_oo_)
+                                (O)
+                              __||__    \)
+                       []/______\[] /
+                       / \______/ \/
+                      /    /__\
+                     (\   /____\)
+                    """,
+                    r"""
+                     O  O
+                      \  \    ______
+                       \  \/         \    
+                        \             |
+                         \______     /|
+                          \_____     _|
+                           \_____   _|
+                            \_______|
+                             \_____/     
+                    """,
+                    r"""
+                                   __  .__
+                        ____   ____ |  | |  |   ____ ___.__.
+                        \__  \ /  _ \|  | |  |  /  _ <   |  |
+                         / __ (  <_> )  |_|  |_(  <_> )___  |
+                        (____  /\____/|____/____/\____// ____|
+                             \/                      \/     
+                    """
+                ]
+                
+                # Fonction pour afficher un dessin ASCII progressivement
+                def afficher_dessin_progressivement():
+                    dessin = random.choice(ascii_art)  # Choisir un dessin au hasard
+                    lignes = dessin.strip().split("\n")  # Diviser le dessin en lignes
+                    for ligne in lignes:
+                        print(ligne)  # Afficher la ligne
+                        time.sleep(0.2)  # Pause de 0.2 seconde entre chaque ligne
+                
+                # Exécuter la fonction pour afficher un dessin progressif
+                afficher_dessin_progressivement()
+                </code></pre>
+            <p><strong>Instructions :</strong> Aucune installation de bibliothèque est nécessaire pour ce code.</p>
+             <p><strong>Conseil :</strong> Il est possible que des erreurs apparaissent dans la console même après avoir installé les bibliothèques nécessaires. Dans ce cas, ne paniquez pas. Montrez cette erreur à ChatGPT, qui vous expliquera les installations nécessaires supplémentaires pour utiliser le code. Assurez-vous également de placer un "!" devant le code d'installation car vous êtes sur Spyder.</p>
+        </section>
+
+        <section class="code-section">
+            <h2>IA analyse de sentiment</h2>
+            <p>L'IA d'analyse de sentiment détecte et évalue les émotions dans vos phrases en identifiant des mots et des adverbes positifs ou négatifs, fournissant ainsi un score de sentiment précis. C'est peut être l'occasion pour vous d'exploiter cette base pour adresser une fonction plus précise de cette IA sur des critiques de film par exemple !</p>
+            <pre><code>from transformers import pipeline
+
+                # Créer un pipeline d'analyse de sentiment
+                sentiment_pipeline = pipeline("sentiment-analysis")
+                
+                # Mots et leurs poids associés
+                positive_words = {
+                    "excellent": 0.5,
+                    "super": 0.4,
+                    "génial": 0.5,
+                    "formidable": 0.5,
+                    "heureux": 0.4,
+                    "magnifique": 0.5,
+                    "merveilleux": 0.5,
+                    "aimé": 0.3,
+                    "top": 0.4,
+                    "plaisant": 0.3,
+                }
+                
+                negative_words = {
+                    "terrible": -0.5,
+                    "horrible": -0.6,
+                    "triste": -0.4,
+                    "déprimant": -0.5,
+                    "nul": -0.3,
+                    "mauvais": -0.4,
+                    "décevant": -0.4,
+                    "en colère": -0.5,
+                }
+                
+                # Adverbes qui modifient les sentiments
+                adverb_weights = {
+                    "très": 0.3,
+                    "extrêmement": 0.4,
+                    "un peu": 0.2,
+                    "vraiment": 0.3,
+                    "rarement": -0.2,
+                    "jamais": -0.4,
+                }
+                
+                # Mots de négation
+                negation_words = ["pas", "aucun", "jamais", "sans", "nulle", "ne"]
+                
+                def analyze_sentiment(sentence):
+                    """Analyse le sentiment d'une phrase et renvoie le type de sentiment."""
+                    result = sentiment_pipeline(sentence)[0]
+                    sentiment = result['label']
+                    score = result['score']
+                
+                    # Ajustement du score en fonction des mots de négation et des mots-clés
+                    words = sentence.lower().split()
+                    adjusted_score = score
+                
+                    # Gérer les mots de négation
+                    negation_found = any(word in negation_words for word in words)
+                
+                    # Ajuster le score pour chaque mot dans la phrase
+                    for word in words:
+                        # Mots positifs
+                        if word in positive_words:
+                            adjusted_score += positive_words[word]
+                        # Mots négatifs
+                        elif word in negative_words:
+                            adjusted_score += negative_words[word]
+                        # Adverbes
+                        elif word in adverb_weights:
+                            adjusted_score += adverb_weights[word]
+                
+                    # Appliquer l'effet de la négation
+                    if negation_found:
+                        adjusted_score *= -1  # Inverser le score si une négation est trouvée
+                
+                    # Évaluer le sentiment ajusté
+                    if adjusted_score > 0.2:
+                        adjusted_sentiment = "Très Positif"
+                    elif adjusted_score > 0:
+                        adjusted_sentiment = "Légèrement Positif"
+                    elif adjusted_score < -0.2:
+                        adjusted_sentiment = "Très Négatif"
+                    else:
+                        adjusted_sentiment = "Légèrement Négatif"
+                
+                    return adjusted_sentiment, max(0, min(1, adjusted_score))  # Garder le score entre 0 et 1
+                
+                def main():
+                    """Fonction principale pour exécuter l'IA d'analyse de sentiment."""
+                    print("Bienvenue dans l'IA d'analyse de sentiment !")
+                    while True:
+                        user_input = input("Veuillez entrer une phrase (ou tapez 'exit' pour quitter) : ")
+                        if user_input.lower() == 'exit':
+                            print("Merci d'avoir utilisé l'IA d'analyse de sentiment !")
+                            break
+                        
+                        sentiment, score = analyze_sentiment(user_input)
+                        print(f"Le sentiment de la phrase est : {sentiment} (score : {score:.2f})\n")
+                
+                if __name__ == "__main__":
+                    main()
+                </code></pre>
+            <p><strong>Instructions :</strong> Avant d'exécuter ce code, assurez-vous d'avoir installé les bibliothèques nécessaires en utilisant les commandes suivantes dans la console de Spyder située en bas à droite. Pour installer, copiez-collez la commande et appuyez sur Entrée (Assurez-vous également de placer un "!" devant le code d'installation car vous êtes sur Spyder.):</p>
+            <pre><code>!pip install transformers
+            </code></pre> 
+            <pre><code>!pip install torch
+            </code></pre> <p><strong>Conseil :</strong> Il est possible que des erreurs apparaissent dans la console même après avoir installé les bibliothèques nécessaires. Dans ce cas, ne paniquez pas. Montrez cette erreur à ChatGPT, qui vous expliquera les installations nécessaires supplémentaires pour utiliser le code. Assurez-vous également de placer un "!" devant le code d'installation car vous êtes sur Spyder.</p>
+        </section>
+        <section class="code-section">
+            <h2>IA de gestion du temps</h2>
+            <p>L'Assistant de Gestion du Temps est conçu pour aider les utilisateurs à organiser leurs tâches et à maximiser leur productivité. Grâce à une interface intuitive, cette IA permet d'ajouter, de supprimer et de gérer des tâches, tout en offrant des conseils pratiques pour améliorer l'efficacité. </p>
+            <pre><code>
+                import time
+                import re
+                from datetime import datetime, timedelta
+                from collections import defaultdict
+                
+                class Task:
+                    def __init__(self, title, due_date=None, priority=1, status='to do'):
+                        self.title = title
+                        self.due_date = due_date
+                        self.priority = priority
+                        self.status = status
+                
+                    def __str__(self):
+                        return f"{self.title} (due: {self.due_date.strftime('%Y-%m-%d %H:%M') if self.due_date else 'No due date'}, priority: {self.priority}, status: {self.status})"
+                
+                class TimeManagementAssistant:
+                    def __init__(self):
+                        self.tasks = []
+                        self.task_stats = defaultdict(list)  # Store time spent on tasks
+                
+                    def add_task(self, title, due_date=None, priority=1):
+                        task = Task(title, due_date, priority)
+                        self.tasks.append(task)
+                        print(f"Tâche ajoutée : {task}")
+                
+                    def remove_task(self, title):
+                        self.tasks = [task for task in self.tasks if task.title != title]
+                        print(f"Tâche '{title}' supprimée.")
+                
+                    def list_tasks(self):
+                        if not self.tasks:
+                            print("Aucune tâche à afficher.")
+                        else:
+                            print("Liste des tâches :")
+                            sorted_tasks = sorted(self.tasks, key=lambda x: (x.priority, x.due_date))
+                            for task in sorted_tasks:
+                                print(f"- {task}")
+                
+                    def parse_due_date(self, date_str):
+                        """Essaie de parser différentes formats de date."""
+                        formats = [
+                            "%Y-%m-%d %H:%M",
+                            "%d/%m/%Y %H:%M",
+                            "%d-%m-%Y %H:%M",
+                            "%Y/%m/%d %H:%M",
+                            "%Y-%m-%d",
+                            "%d/%m/%Y",
+                            "%d-%m-%Y",
+                            "%Y/%m/%d",
+                            "%H:%M %d/%m/%Y",
+                            "%H:%M %Y-%m-%d",
+                        ]
+                        for fmt in formats:
+                            try:
+                                return datetime.strptime(date_str, fmt)
+                            except ValueError:
+                                continue
+                        return None
+                
+                    def set_reminder(self, task_title, reminder_time):
+                        while True:
+                            now = datetime.now()
+                            if now >= reminder_time:
+                                print(f"Rappel : Il est temps de {task_title}!")
+                                break
+                            time.sleep(30)
+                
+                    def productivity_tips(self):
+                        tips = [
+                            "Essayez la technique Pomodoro : travaillez pendant 25 minutes, puis faites une pause de 5 minutes.",
+                            "Priorisez vos tâches : commencez par les tâches les plus importantes.",
+                            "Utilisez des applications de gestion du temps pour rester organisé.",
+                            "Ne laissez pas les tâches s'accumuler : faites un peu chaque jour!",
+                            "Essayez de limiter vos tâches à 3-5 tâches principales par jour pour ne pas vous sentir accablé."
+                        ]
+                        print("Conseils de productivité :")
+                        for tip in tips:
+                            print(f"- {tip}")
+                
+                    def suggest_task_based_on_time(self):
+                        upcoming_tasks = sorted(
+                            [task for task in self.tasks if task.due_date],
+                            key=lambda x: x.due_date
+                        )
+                        if not upcoming_tasks:
+                            print("Aucune tâche à échéance imminente.")
+                            return
+                        
+                        print("Tâches à venir :")
+                        for task in upcoming_tasks:
+                            remaining_time = task.due_date - datetime.now()
+                            if remaining_time <= timedelta(hours=1):
+                                print(f"Suggestion : Vous devriez vous concentrer sur '{task.title}', il reste moins d'une heure avant l'échéance.")
+                            elif remaining_time <= timedelta(days=1):
+                                print(f"Suggestion : Pensez à terminer '{task.title}' bientôt, l'échéance est demain.")
+                
+                    def analyze_productivity(self):
+                        if not self.tasks:
+                            print("Aucune tâche pour analyser la productivité.")
+                            return
+                
+                        completed_tasks = [task for task in self.tasks if task.status == 'completed']
+                        if completed_tasks:
+                            print(f"Vous avez complété {len(completed_tasks)} tâche(s) depuis votre dernière session.")
+                            for task in completed_tasks:
+                                print(f"- {task.title}")
+                        else:
+                            print("Aucune tâche n'a encore été complétée.")
+                
+                    def update_task_status(self, title, status):
+                        for task in self.tasks:
+                            if task.title == title:
+                                task.status = status
+                                print(f"Tâche '{title}' mise à jour avec le statut '{status}'.")
+                                return
+                        print(f"Aucune tâche trouvée avec le titre '{title}'.")
+                
+                    def generate_report(self):
+                        total_tasks = len(self.tasks)
+                        completed_tasks = [task for task in self.tasks if task.status == 'completed']
+                        print("\n--- Rapport de Temps ---")
+                        print(f"Tâches totales : {total_tasks}")
+                        print(f"Tâches complétées : {len(completed_tasks)}")
+                        for task in completed_tasks:
+                            print(f"- {task.title} (due: {task.due_date})")
+                        print("-----------------------")
+                
+                    def start_timer(self, duration, pause_duration):
+                        print(f"Début de la session de révision pour {duration} minutes !")
+                        time.sleep(duration * 60)  # Convertit les minutes en secondes
+                        print("Temps écoulé ! Prenez une pause de {pause_duration} minutes.")
+                        time.sleep(pause_duration * 60)  # Pause
+                        print("Pause terminée ! Prêt pour la prochaine session.")
+                
+                    def revision_timer_options(self):
+                        print("Choisissez une technique de révision :")
+                        print("1. Technique Pomodoro (25 min de révision, 5 min de pause)")
+                        print("2. Session prolongée (50 min de révision, 10 min de pause)")
+                        print("3. Session courte (15 min de révision, 3 min de pause)")
+                        choice = input("Entrez votre choix (1/2/3) : ")
+                
+                        if choice == '1':
+                            self.start_timer(25, 5)
+                        elif choice == '2':
+                            self.start_timer(50, 10)
+                        elif choice == '3':
+                            self.start_timer(15, 3)
+                        else:
+                            print("Choix non valide.")
+                
+                def main():
+                    assistant = TimeManagementAssistant()
+                    print("Bienvenue dans l'Assistant de Gestion du Temps !")
+                
+                    while True:
+                        print("\nOptions : 1. Ajouter une tâche 2. Supprimer une tâche 3. Lister les tâches 4. Conseils de productivité 5. Suggérer des tâches 6. Analyser la productivité 7. Mettre à jour le statut d'une tâche 8. Générer un rapport 9. Timer de révision 10. Quitter")
+                        choice = input("Choisissez une option : ")
+                
+                        if choice == '1':
+                            title = input("Entrez le titre de la tâche : ")
+                            due_date_input = input("Entrez la date d'échéance (formats acceptés: YYYY-MM-DD HH:MM, DD/MM/YYYY HH:MM, etc.) ou laissez vide : ")
+                            priority = input("Entrez la priorité (1-5, 1 étant la plus haute) : ")
+                            due_date = assistant.parse_due_date(due_date_input) if due_date_input else None
+                            assistant.add_task(title, due_date, int(priority) if priority.isdigit() else 1)
+                        elif choice == '2':
+                            title = input("Entrez le titre de la tâche à supprimer : ")
+                            assistant.remove_task(title)
+                        elif choice == '3':
+                            assistant.list_tasks()
+                        elif choice == '4':
+                            assistant.productivity_tips()
+                        elif choice == '5':
+                            assistant.suggest_task_based_on_time()
+                        elif choice == '6':
+                            assistant.analyze_productivity()
+                        elif choice == '7':
+                            title = input("Entrez le titre de la tâche à mettre à jour : ")
+                            status = input("Entrez le nouveau statut (to do, in progress, completed) : ")
+                            assistant.update_task_status(title, status)
+                        elif choice == '8':
+                            assistant.generate_report()
+                        elif choice == '9':
+                            assistant.revision_timer_options()
+                        elif choice == '10':
+                            print("Merci d'avoir utilisé l'Assistant de Gestion du Temps !")
+                            break
+                        else:
+                            print("Option non valide. Veuillez réessayer.")
+                
+                if __name__ == "__main__":
+                    main()
+                </code></pre>
+            <p><strong>Instructions :</strong> Avant d'exécuter ce code, assurez-vous d'avoir installé les bibliothèques nécessaires en utilisant les commandes suivantes dans la console de Spyder située en bas à droite. Pour installer, copiez-collez la commande et appuyez sur Entrée (Assurez-vous également de placer un "!" devant le code d'installation car vous êtes sur Spyder.):</p>
+            <pre><code>!pip install schedule playsound</code></pre> 
+            <pre><code>!sudo apt-get install python3-tk</code></pre> 
+            <p><strong>Conseil :</strong> Il est possible que des erreurs apparaissent dans la console même après avoir installé les bibliothèques nécessaires. Dans ce cas, ne paniquez pas. Montrez cette erreur à ChatGPT, qui vous expliquera les installations nécessaires supplémentaires pour utiliser le code. Assurez-vous également de placer un "!" devant le code d'installation car vous êtes sur Spyder.</p>
+        </section>
+        
+    </main>
+
+    <footer class="code-section">
+        <p>&copy; 2024 Code IA. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
+
+
+
