@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Code Python & IA</title>
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4ede6; /* Fond beige clair */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Header avec fond orange et arrondi */
+        header {
+            text-align: center;
+            background-color: #d4a373; /* Orange */
+            padding: 40px 0;
+            margin-bottom: 20px;
+            border-radius: 0 0 30px 30px; /* Bords arrondis */
+        }
+
+        header h1 {
+            margin: 0;
+            color: #ffffff; /* Titre en blanc */
+            font-size: 2.7rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombre légère pour lisibilité */
+        }
+
+        /* Style de la barre de traduction */
+        #google_translate_element {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        /* Barre de navigation */
+        nav {
+            background-color: #d4b89a;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #262524;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-shadow: 0.5px 0.5px 0 #fff, -0.5px -0.5px 0 #fff;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #e0bfbf;
+            color: #8b7d6b;
+        }
+
+        /* Contenu principal */
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Titres avec fond orange et texte blanc */
+        h2 {
+            color: #ffffff; /* Titres en blanc */
+            text-align: center;
+            margin: 30px 0;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            background-color: #d4a373; /* Fond orange */
+            padding: 15px;
+            border-radius: 15px; /* Arrondi */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Légère ombre pour améliorer la visibilité */
+        }
+
+        p {
+            color: #333;
+            text-align: center;
+            margin: 0 20px;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        /* Formulaire de contact */
+        .contact-form {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            background-color: #d4a373; /* Couleur de fond orange */
+            color: #ffffff; /* Texte en blanc */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #c09b65; /* Couleur un peu plus foncée au survol */
+        }
+
+        /* Footer avec style et centré */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1rem;
+            color: #ffffff; /* Couleur du texte en blanc */
+            padding: 20px;
+            background-color: #d4a373; /* Couleur de fond comme les titres */
+            border-radius: 0; /* Pas d'arrondi */
+            position: relative; /* Permet d'appliquer le bord arrondi correctement */
+            left: 0;
+            right: 0; /* Fixe le footer sur les côtés */
+            width: 100%; /* Fait toucher les côtés */
+            margin-bottom: 0; /* Retire l'espacement en bas */
+        }
+
+        footer p {
+            margin: 0;
+            display: inline-block; /* Centre le texte horizontalement */
+            padding: 0 20px; /* Ajoute de l'espace horizontal */
+            color: #f7f4f4;
+        }
+    </style>
+
+    <!-- Script pour Google Traduction -->
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'fr',
+                includedLanguages: 'en,fr',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Code Python & IA</h1>
+    </header>
+
+    <div id="google_translate_element"></div> <!-- Widget Google Traduction, au-dessus du header -->
+
+    <!-- Barre de navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="equipe.html">A propos de nous</a></li>
+            <li><a href="codes.html">Codes IA</a></li>
+            <li><a href="conseils.html">Conseils</a></li>
+            <li><a href="contacts.html">Contact</a></li> <!-- Lien vers la page Contact -->
+        </ul>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main>
+        <section>
+            <h2>Contactez-nous</h2>
+            <p>Nous aimerions avoir de vos nouvelles ! N'hésitez pas à nous contacter pour toute question, suggestion ou simplement nous laisser un commentaire sur votre expérience vis à vis de notre site. Normalement vous ne devriez pas rencontrer de problème apparent ou alors c'est que notre codeur (Constant) s'est trompé et dans ce cas on aura une petite discussion lors de la prochaine réunion.... </p>
+        </section>
+
+        <div class="contact-form">
+            <form action="mailto:coleaubaczykrafael@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+
+        <section>
+            <h2>Informations de Contact</h2>
+            <p>Email : coleaubaczykrafael@gmail.com</p>
+            <p>Téléphone : +33 06 66 06 70 85</p>
+            <p>Adresse : Valenciennes Haut-De-France</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 - Code Python & IA. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
