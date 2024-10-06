@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Équipe - Code Python & IA</title>
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4ede6; /* Fond beige clair */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Header avec fond orange et arrondi */
+        header {
+            text-align: center;
+            background-color: #d4a373; /* Orange */
+            padding: 40px 0;
+            margin-bottom: 20px;
+            border-radius: 0 0 30px 30px; /* Bords arrondis */
+        }
+
+        header h1 {
+            margin: 0;
+            color: #ffffff; /* Titre en blanc */
+            font-size: 2.7rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombre légère pour lisibilité */
+        }
+
+        /* Style de la barre de traduction */
+        #google_translate_element {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        /* Barre de navigation */
+        nav {
+            background-color: #d4b89a;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #262524;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-shadow: 0.5px 0.5px 0 #fff, -0.5px -0.5px 0 #fff;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #e0bfbf;
+            color: #8b7d6b;
+        }
+
+        /* Contenu principal */
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Titres avec fond orange et texte blanc */
+        h2 {
+            color: #ffffff; /* Titres en blanc */
+            text-align: center;
+            margin: 30px 0;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            background-color: #d4a373; /* Fond orange */
+            padding: 15px;
+            border-radius: 15px; /* Arrondi */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Légère ombre pour améliorer la visibilité */
+        }
+
+        p {
+            color: #333;
+            text-align: center;
+            margin: 0 20px;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        /* Style de l'équipe avec grid */
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            margin: 0 20px;
+        }
+
+        .team-member {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .team-member:hover {
+            transform: scale(1.05);
+        }
+
+        .team-member img {
+    width: 150px; /* Largeur fixe */
+    height: 150px; /* Hauteur égale à la largeur pour un carré parfait */
+    border-radius: 50%; /* Garder le style arrondi */
+    object-fit: cover; /* S'assure que l'image s'adapte bien dans le carré */
+    margin-bottom: 10px;
+}
+
+        .team-member h3 {
+            color: #8b7d6b; /* Beige foncé */
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+
+        .team-member p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Footer avec style et centré */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1rem;
+            color: #ffffff; /* Couleur du texte en blanc */
+            padding: 20px;
+            background-color: #d4a373; /* Couleur de fond comme les titres */
+            border-radius: 0; /* Pas d'arrondi */
+            position: relative; /* Permet d'appliquer le bord arrondi correctement */
+            left: 0;
+            right: 0; /* Fixe le footer sur les côtés */
+            width: 100%; /* Fait toucher les côtés */
+            margin-bottom: 0; /* Retire l'espacement en bas */
+        }
+
+        footer p {
+            margin: 0;
+            display: inline-block; /* Centre le texte horizontalement */
+            padding: 0 20px; /* Ajoute de l'espace horizontal */
+            color: #f7f4f4;
+        }
+    </style>
+
+    <!-- Script pour Google Traduction -->
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'fr',
+                includedLanguages: 'en,fr',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Code Python & IA</h1>
+    </header>
+
+    <div id="google_translate_element"></div> <!-- Widget Google Traduction, au-dessus du header -->
+
+    <!-- Barre de navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="equipe.html">A propos de nous</a></li>
+            <li><a href="codes.html">Codes IA</a></li>
+            <li><a href="conseils.html">Conseils</a></li>
+            <li><a href="contacts.html">Contact</a></li> <!-- Nouveau lien Contact -->
+        </ul>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main>
+        <!-- Nouvelle section Notre Histoire -->
+        <section>
+            <h2>Notre Histoire</h2>
+            <p>Code Python & IA a débuté avec la passion pour l'enseignement de la programmation et de l'intelligence artificielle. Au fil des années, nous sommes passé d'une simple bande d'amis à une bande d'amis toujours, mais, avec l'ambition de faciliter la maitrise de l'IA chez tous les utilisateurs et personnes désirantes d'apprendre à coder. C'est alors que le plus malin d'entre nous Rafael (moi) a une l'idée de développer un site web destiné à partager nos créations (enfin surtout celles de notre super codeur Constant). En espérant que cela vous plaise !</p>
+        </section>
+
+        <!-- Section Notre Équipe -->
+        <section>
+            <h2>Notre Équipe</h2>
+            <p>Voici notre équipe d'experts passionnés par Python et l'intelligence artificielle. Nous sommes dédiés à vous aider à apprendre et à maîtriser les concepts clés de la programmation et de l'IA.</p>
+            <p>Chaque membre de notre équipe apporte une expertise unique (et d'autres atouts mais c'est privé désolé...), allant de l'apprentissage automatique à la science des données. Ensemble, nous visons à rendre l'apprentissage accessible et amusant (sans blague, il suffit de voir les photos ci-dessous).</p>
+        </section>
+
+        <h2>Membres de l'Équipe</h2>
+        <div class="team">
+            <div class="team-member">
+                <h3>Rafael Coleau</h3>
+                <img src="moi.jpg">
+                <p>Fondateur du site (et essaye de faire le beau gosse)</p>
+            </div>
+            <div class="team-member">
+                <h3>Constant Raux</h3>
+                <img src="clement.jpg">
+                <p>Développeur IA (et actuellement sous alcool)</p>
+            </div>
+            <div class="team-member">
+                <h3>Axel Cimma</h3>
+                <img src="Marc.jpg">
+                <p>Développeur Web (bon lui on voit pas bien mais il a une belle gueule)</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 - Code Python & IA. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
